@@ -1,38 +1,99 @@
 .App {
-  text-align: center;
+  position: relative;
+  height: 100vh;
+  background: #fafafa;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark {
+  background: #171823;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.overlay {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.lightImage {
+  background: url(/public/assets/lightBackground.png),
+    linear-gradient(225deg, #5596ff 0%, #ac2deb 100%);
+}
+
+.darkImage {
+  background: url(/public/assets/darkBackground.png),
+    linear-gradient(225deg, #5596ff 0%, #ac2deb 100%);
+}
+
+@media (max-width: 580px) {
+  .header__logo {
+    font-size: 1.5rem !important;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .header,
+  .new-todo,
+  .todo-container,
+  .filter-bar {
+    margin-inline: 1.5rem !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    padding-top: 48px !important;
+  }
+
+  .new-todo {
+    padding: 1rem 1.25rem !important;
+    margin-top: 2.5rem !important;
+  }
+
+  .new-todo__input {
+    font-size: 12px !important;
+  }
+
+  .todo-container__list {
+    height: 300px !important;
+  }
+
+  .todo-container__list-item__name {
+    font-size: 12px !important;
+  }
+
+  .todo-container__list-item {
+    padding: 1rem 1.25rem !important;
+  }
+
+  .filter-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 2rem;
+  }
+
+  .filter-container > div:first-child {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .filter-container > div:nth-child(2) {
+    grid-column: span 2;
+    justify-content: center;
+  }
+
+  .filter-container > div:last-child {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: end;
+  }
+
+  .todo-container__item-check svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .new-todo__check svg {
+    width: 20px;
+    height: 20px;
   }
 }

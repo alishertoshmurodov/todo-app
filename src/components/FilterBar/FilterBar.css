@@ -1,0 +1,83 @@
+.filter-bar {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.filter-container {
+  border-top: 1px solid #e3e4f1;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 0 0 5px 5px;
+  padding: 1rem 1.5rem;
+}
+
+.dark .filter-container {
+  border-color: #393a4b;
+  background-color: #25273d;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+}
+
+.filter-bar__filters {
+  display: flex;
+  gap: 19px;
+}
+
+.filter-bar__filters .checked {
+  color: #3a7cfd !important;
+}
+
+.filter-bar__item-left p {
+  color: #9495a5;
+}
+
+.dark .filter-bar__item-left p {
+  color: #5b5e7e;
+  cursor: default;
+}
+
+.filter-bar___btn {
+  border: none;
+  background: none;
+  color: #9495a5;
+  font-family: "Josefin Sans";
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 100ms ease;
+}
+
+.dark .filter-bar___btn {
+  color: #5b5e7e;
+}
+
+.filter-bar___btn:hover {
+  color: #494c6b;
+}
+
+.dark .filter-bar___btn:hover {
+  color: #e3e4f1;
+}
+
+.filter-bar___clear-btn {
+  border: none;
+  background: none;
+  color: #9495a5;
+  font-family: "Josefin Sans";
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 100ms ease;
+}
+
+.dark .filter-bar___clear-btn {
+  color: #5b5e7e;
+}
+
+.filter-bar___clear-btn:hover {
+  color: #494c6b;
+}
+
+.dark .filter-bar___clear-btn:hover {
+  color: #e3e4f1;
+}

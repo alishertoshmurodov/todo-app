@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Jog around the park 3x",
+    "isDone": false,
+    "id": "Jog around the park 3x"
+  },
+  {
+    "name": "Read for 30 minutes",
+    "isDone": false,
+    "id": "Read for 30 minutes"
+  },
+  { "name": "Pick up groceries", "isDone": false, "id": "Pick up groceries" }
+]
