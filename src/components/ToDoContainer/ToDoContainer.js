@@ -1,10 +1,15 @@
 import "./ToDoContainer.css";
 import { ReactComponent as CrossIcon } from "../../assets/images/icon-cross.svg";
 import { ReactComponent as CheckIcon } from "../../assets/images/icon-check.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ToDoContainer({ toDoData, listType, changeList }) {
-  const [checkedItems, setCheckedItems] = useState({});
+  // const [checkedItems, setCheckedItems] = useState({});
+  const [checkedItems, setCheckedItems] = useState(() => {
+    // Initialize with data from localStorage or an empty object
+    const storedData = localStorage.getItem("checkedItems");
+    return storedData ? JSON.parse(storedData) : {};
+  });
 
   const handleCheckClick = (key) => {
     // Checked to dos
@@ -27,6 +32,11 @@ function ToDoContainer({ toDoData, listType, changeList }) {
       prevToDoData.filter((toDo) => toDo.id !== key)
     );
   };
+
+  useEffect(() => {
+    // Save checkedItems to localStorage whenever it changes
+    localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+  }, [checkedItems]);
 
   const filteredToDo = toDoData.filter((toDo) => {
     if (listType === "All") {
