@@ -15,7 +15,11 @@ function Header({ setTheme, theme }) {
     <header className="header">
       <h1 className="header__logo">Todo</h1>
       <div className="theme-switch" onClick={changeThemeHandler}>
-        {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+        {theme === "dark" ? (
+          <SunIcon className="rotate-center" />
+        ) : (
+          <MoonIcon className="rotate-vert-center" />
+        )}
       </div>
     </header>
   );

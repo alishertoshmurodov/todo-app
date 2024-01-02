@@ -4,7 +4,6 @@ import { ReactComponent as CheckIcon } from "../../assets/images/icon-check.svg"
 import { useState, useEffect } from "react";
 
 function ToDoContainer({ toDoData, listType, changeList }) {
-  // const [checkedItems, setCheckedItems] = useState({});
   const [checkedItems, setCheckedItems] = useState(() => {
     // Initialize with data from localStorage or an empty object
     const storedData = localStorage.getItem("checkedItems");
