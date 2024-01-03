@@ -12,6 +12,16 @@
   background-color: #fff;
   box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   border-radius: 5px 5px 0px 0px;
+  overflow-y: scroll;
+}
+
+.todo-container__list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.todo-container__list::-webkit-scrollbar-thumb {
+  background-color: #d1d2da;
+  border-radius: 6px;
 }
 
 .dark .todo-container__list {
